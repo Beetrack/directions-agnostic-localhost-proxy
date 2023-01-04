@@ -20,11 +20,13 @@ npm install
 
 - Go to https://app.beetrack.dev and log in with any account
 
-- Open navigator console and copy the value of `document.cookie` to get the session information
+- Open navigator inspect tools and looking for beetrack auth cookie. In Google Chrome, follow the numbers.
 
 ![copy value from navigator](./readme-img/copy-from.png)
 
-- Paste `document.cookie` value in `proxy.js` file in the `PASTE YOUR app.beetrack.dev COOKIE HERE` part
+- Paste cookie value in `proxy.js` file in the `PASTE_COOKIE_HERE` part. Don't delete the final `;`.
+
+![paste value here](./readme-img/paste-here.png)
 
 - Execute this proxy
 

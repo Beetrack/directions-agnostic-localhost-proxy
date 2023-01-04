@@ -11,8 +11,10 @@ app.use('/', createProxyMiddleware({
     changeOrigin: true,
     logLevel: 'debug',
     onProxyReq: function(proxyReq, req, res) {
-        proxyReq.setHeader('cookie', 'PASTE YOUR app.beetrack.dev COOKIE HERE')
+        proxyReq.setHeader('cookie', '_beetrack_auth_session=PASTE_COOKIE_HERE;')
     }
 }))
 
-app.listen(8080)
+app.listen(8080, () => {
+    console.log('Proxy listening at port 8080')
+})
